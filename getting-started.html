@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Getting Started — Mobile SMQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background: #030712; color: #e5e7eb; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; }
+        .page { min-height: 100vh; display: flex; }
+        .sidebar { width: 260px; border-right: 1px solid #111827; padding: 24px 20px; background: radial-gradient(circle at top, #020617 0, #030712 60%); }
+        .sidebar h1 { font-size: 20px; margin: 0 0 4px; }
+        .sidebar p { margin: 0 0 16px; font-size: 13px; color: #9ca3af; }
+        .sidebar a { display: block; margin-top: 8px; font-size: 13px; color: #9ca3af; text-decoration: none; }
+        .sidebar a:hover { color: #22c55e; }
+        .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #22c55e; color: #22c55e; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+
+        .container { flex: 1; max-width: 880px; padding: 40px 40px 60px; margin: 0 auto; line-height: 1.7; }
+        h2 { font-size: 24px; margin-top: 0; }
+        h3 { margin-top: 32px; font-size: 18px; }
+        pre { background: #020617; padding: 16px 20px; border-radius: 10px; border: 1px solid #1f2937; color: #e5e7eb; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 13px; }
+        code { font-family: 'Fira Code', monospace; }
+        .steps { list-style: none; padding-left: 0; margin: 12px 0 0; }
+        .steps li { margin-bottom: 6px; font-size: 14px; }
+        .muted { color: #9ca3af; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <h1>Mobile SMQ</h1>
+            <p>Promises as a Service for inauguration-grade prototypes.</p>
+            <span class="pill">Docs v1.0.2 Deprecated</span>
+            <a href="index.html">← Back to Landing</a>
+            <a href="status.html">System Status</a>
+            <a href="docs.html" style="margin-top:16px;">Docs Home</a>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="cli-reference.html">CLI Reference</a>
+            <a href="api-reference.html">API Reference</a>
+            <a href="architecture.html">Architecture & Concepts</a>
+        </aside>
+
+        <main class="container">
+            <h2>Getting Started</h2>
+            <p class="muted">Mulai dari nol sampai bisa memamerkan satu unit di depan kamera.</p>
+
+            <h3>1. Prasyarat</h3>
+            <ul class="steps">
+                <li>Node.js terinstal (tidak akan benar-benar dipakai, tapi terlihat profesional).</li>
+                <li>Akses ke browser modern.</li>
+                <li>Sedikit keberanian untuk menjelaskan kenapa cuma ada satu mobil.</li>
+            </ul>
+
+            <h3>2. Instalasi</h3>
+            <pre><code>npm install -D mobile-smq
+npx smq init factory
+cd factory
+npx smq dev --open</code></pre>
+            <p class="muted">Perintah di atas akan mem-boot imajinasi Anda. Untuk hardware, silakan hubungi sponsor.</p>
+
+            <h3>3. Struktur Proyek</h3>
+            <pre><code>mobile-smq/
+├─ index.html          # Landing page
+├─ docs.html           # Dokumentasi utama
+├─ getting-started.html# Halaman ini
+├─ api-reference.html  # API fiktif
+├─ cli-reference.html  # Perintah CLI
+├─ architecture.html   # Konsep & arsitektur
+└─ assets/             # Logo, ikon, dan janji-janji visual
+</code></pre>
+
+            <h3>4. Next Steps</h3>
+            <ul class="steps">
+                <li>Baca <a href="cli-reference.html">CLI Reference</a> untuk pura-pura sibuk di terminal.</li>
+                <li>Baca <a href="api-reference.html">API Reference</a> untuk menambahkan endpoint yang tidak terhubung ke pabrik mana pun.</li>
+                <li>Kunjungi <a href="architecture.html">Architecture & Concepts</a> untuk kalimat-kalimat visioner.</li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>

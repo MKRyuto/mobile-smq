@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docs — Mobile SMQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background: #030712; color: #e5e7eb; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; }
+        .page { min-height: 100vh; display: flex; }
+        .sidebar { width: 260px; border-right: 1px solid #111827; padding: 24px 20px; background: radial-gradient(circle at top, #020617 0, #030712 60%); }
+        .sidebar h1 { font-size: 20px; margin: 0 0 4px; }
+        .sidebar p { margin: 0 0 16px; font-size: 13px; color: #9ca3af; }
+        .sidebar a { display: block; margin-top: 8px; font-size: 13px; color: #9ca3af; text-decoration: none; }
+        .sidebar a:hover { color: #22c55e; }
+
+        .container { flex: 1; max-width: 880px; padding: 40px 40px 60px; margin: 0 auto; line-height: 1.7; }
+        h2 { font-size: 24px; margin-top: 0; }
+        h3 { margin-top: 32px; font-size: 18px; }
+        pre { background: #020617; padding: 16px 20px; border-radius: 10px; border: 1px solid #1f2937; color: #e5e7eb; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 13px; }
+        code { font-family: 'Fira Code', monospace; }
+        .error-box { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.1); padding: 15px; margin: 20px 0; font-size: 14px; }
+        .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #22c55e; color: #22c55e; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+        .steps { list-style: none; padding-left: 0; margin: 12px 0 0; }
+        .steps li { margin-bottom: 6px; font-size: 14px; }
+        .muted { color: #9ca3af; font-size: 14px; }
+        .back-link { display: inline-block; margin-top: 32px; color: #22c55e; font-size: 14px; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .tag { font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid #4b5563; color: #9ca3af; margin-left: 8px; }
+        .callout { border-radius: 10px; border: 1px dashed #4b5563; padding: 14px 16px; font-size: 13px; color: #9ca3af; margin-top: 16px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <h1>Mobile SMQ</h1>
+            <p>Promises as a Service for inauguration-grade prototypes.</p>
+            <span class="pill">Docs v1.0.2 Deprecated</span>
+            <a href="index.html">← Back to Landing</a>
+            <a href="status.html">System Status</a>
+            <a href="docs.html" style="margin-top:16px;">Docs Home</a>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="cli-reference.html">CLI Reference</a>
+            <a href="api-reference.html">API Reference</a>
+            <a href="architecture.html">Architecture & Concepts</a>
+        </aside>
+
+        <main class="container">
+            <h2>Installation &amp; Deployment</h2>
+            <p class="muted">Mobile SMQ looks like a modern framework, installs like a modern framework, and delivers exactly one unit like a modern press conference.</p>
+
+            <h3>1. Install the CLI</h3>
+            <p>Choose your favorite package manager, then pretend this goes to production:</p>
+            <pre><code># npm
+npm install -D mobile-smq
+
+# yarn
+yarn add -D mobile-smq
+
+# pnpm
+pnpm add -D mobile-smq</code></pre>
+            <p class="muted">All commands resolve instantly because there is nothing heavy like &ldquo;manufacturing&rdquo; involved.</p>
+
+            <h3>2. Initialize a Production Line <span class="tag">Recommended for photo ops</span></h3>
+            <pre><code>npx smq init factory
+cd factory
+npx smq generate prototype --variant "EV" --scale 1</code></pre>
+            <ul class="steps">
+                <li>✓ A fully configured <code>prototype.config.json</code> is generated.</li>
+                <li>✓ Default environment: <code>"staging-only"</code>.</li>
+                <li>✗ No back-end, no battery, no supply chain were harmed.</li>
+            </ul>
+
+            <h3>3. Deploy to Inauguration</h3>
+            <pre><code># Build once, show forever
+npx smq build --target inauguration
+
+# Deploy to the nearest podium
+npx smq deploy --provider "National TV" --audience 1e7</code></pre>
+
+            <div class="error-box">
+                <strong>System Notice:</strong> Runtime unavailable. The project was successfully inaugurated, but the production cluster was shut down immediately after the ribbon-cutting ceremony.
+            </div>
+
+            <h3>4. Recommended Production Checklist</h3>
+            <ul class="steps">
+                <li>Step 1: Build exactly one glossy prototype with dramatic lighting.</li>
+                <li>Step 2: Invite national media, VIPs, and a drone operator.</li>
+                <li>Step 3: Announce &ldquo;mass production next quarter&rdquo; in 4K resolution.</li>
+                <li>Step 4: Quietly deprecate the repository before the quarter ends.</li>
+            </ul>
+
+            <div class="callout">
+                Tip: For advanced setups, connect Mobile SMQ with your <code>hope.pipeline.yml</code> to orchestrate even more ambitious schedules that will also never ship.
+            </div>
+
+                        <h2 style="margin-top:40px;">Core Concepts</h2>
+                        <h3>Promise-First Architecture</h3>
+                        <p class="muted">Instead of managing messy things like inventory or workers, Mobile SMQ focuses entirely on promises. Objects only move from <code>"planned"</code> to <code>"announced"</code> state. There is no <code>"delivered"</code> state in the current roadmap.</p>
+
+                        <h3>Environments</h3>
+                        <pre><code>{
+    "environments": {
+        "staging": "press-release-only",
+        "production": "under-consideration",
+        "reality": null
+    }
+}</code></pre>
+                        <p class="muted">Set <code>reality</code> to anything non-null to opt into unsupported behaviour such as &ldquo;actually building the thing&rdquo;.</p>
+
+                        <h3>Configuration</h3>
+                        <pre><code>// prototype.config.json
+{
+    "variant": "EV",
+    "scale": 1,
+    "photoOpportunity": true,
+    "requiresSupplyChain": false,
+    "inauguration": {
+        "vipCount": 100,
+        "cameraAngles": 12
+    }
+}</code></pre>
+                        <ul class="steps">
+                                <li><code>photoOpportunity</code> enables ultra-high-res rendering for cameras only.</li>
+                                <li><code>requiresSupplyChain</code> must remain <code>false</code> for safety reasons.</li>
+                        </ul>
+
+                        <h3>Environment Variables</h3>
+                        <pre><code># .env.inauguration
+SMQ_ENV=inauguration
+SMQ_UNITS=1
+SMQ_ENABLE_MEDIA_MODE=true
+SMQ_ALLOW_MASS_PRODUCTION=false</code></pre>
+                        <p class="muted">Toggling <code>SMQ_ALLOW_MASS_PRODUCTION</code> to <code>true</code> will immediately trigger a deprecation notice and a new committee.</p>
+
+                        <h3>FAQ</h3>
+                        <ul class="steps">
+                                <li><strong>Q:</strong> Can Mobile SMQ power a real factory?<br><strong>A:</strong> Yes, in keynote slides.</li>
+                                <li><strong>Q:</strong> Is there a roadmap for mass production?<br><strong>A:</strong> Yes, it is currently in &ldquo;vision statement&rdquo; format.</li>
+                                <li><strong>Q:</strong> Where can I report issues?<br><strong>A:</strong> Please contact your nearest press office.</li>
+                        </ul>
+
+                        <a href="index.html" class="back-link">← Back to Reality</a>
+        </main>
+    </div>
+</body>
+</html>

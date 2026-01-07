@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CLI Reference — Mobile SMQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { background: #030712; color: #e5e7eb; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; }
+        .page { min-height: 100vh; display: flex; }
+        .sidebar { width: 260px; border-right: 1px solid #111827; padding: 24px 20px; background: radial-gradient(circle at top, #020617 0, #030712 60%); }
+        .sidebar h1 { font-size: 20px; margin: 0 0 4px; }
+        .sidebar p { margin: 0 0 16px; font-size: 13px; color: #9ca3af; }
+        .sidebar a { display: block; margin-top: 8px; font-size: 13px; color: #9ca3af; text-decoration: none; }
+        .sidebar a:hover { color: #22c55e; }
+        .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #22c55e; color: #22c55e; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+
+        .container { flex: 1; max-width: 880px; padding: 40px 40px 60px; margin: 0 auto; line-height: 1.7; }
+        h2 { font-size: 24px; margin-top: 0; }
+        h3 { margin-top: 32px; font-size: 18px; }
+        pre { background: #020617; padding: 16px 20px; border-radius: 10px; border: 1px solid #1f2937; color: #e5e7eb; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 13px; }
+        code { font-family: 'Fira Code', monospace; }
+        .muted { color: #9ca3af; font-size: 14px; }
+        .cmd { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <aside class="sidebar">
+            <h1>Mobile SMQ</h1>
+            <p>Promises as a Service for inauguration-grade prototypes.</p>
+            <span class="pill">Docs v1.0.2 Deprecated</span>
+            <a href="index.html">← Back to Landing</a>
+            <a href="status.html">System Status</a>
+            <a href="docs.html" style="margin-top:16px;">Docs Home</a>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="cli-reference.html">CLI Reference</a>
+            <a href="api-reference.html">API Reference</a>
+            <a href="architecture.html">Architecture & Concepts</a>
+        </aside>
+
+        <main class="container">
+            <h2>CLI Reference</h2>
+            <p class="muted">Perintah-perintah berikut dirancang untuk terlihat sibuk di terminal sambil tidak membangun apapun.</p>
+
+            <h3><span class="cmd">smq init</span></h3>
+            <pre><code>npx smq init &lt;project-name&gt;</code></pre>
+            <p class="muted">Membuat folder baru dengan konfigurasi lengkap untuk satu unit prototipe dan banyak janji.</p>
+
+            <h3><span class="cmd">smq generate prototype</span></h3>
+            <pre><code>npx smq generate prototype --variant "EV" --scale 1</code></pre>
+            <p class="muted">Menghasilkan definisi prototipe yang sangat detail untuk sesuatu yang tidak akan memasuki jalur produksi.</p>
+
+            <h3><span class="cmd">smq build</span></h3>
+            <pre><code>npx smq build --target inauguration</code></pre>
+            <p class="muted">Membangun paket final untuk ditayangkan di TV nasional, bukan untuk dikirim ke dealer.</p>
+
+            <h3><span class="cmd">smq deploy</span></h3>
+            <pre><code>npx smq deploy --provider "National TV" --audience 1e7</code></pre>
+            <p class="muted">Mensimulasikan proses deploy ke jutaan pemirsa tanpa menyentuh satu pun jalur produksi.</p>
+
+            <h3><span class="cmd">smq status</span></h3>
+            <pre><code>npx smq status</code></pre>
+            <p class="muted">Menampilkan metrik penting seperti &ldquo;0 workers online&rdquo; dan &ldquo;100% of promises pending&rdquo;.</p>
+        </main>
+    </div>
+</body>
+</html>
